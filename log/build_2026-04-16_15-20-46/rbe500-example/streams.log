@@ -1,0 +1,23 @@
+[0.009s] Invoking command in '/home/alecr/HRI_ws/build/rbe500-example': AMENT_PREFIX_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alecr/HRI_ws/install/open_manipulator_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/alecr/HRI_ws/build/rbe500-example -- -j16 -l16
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target basic_robot_control[0m
+[0.053s] [100%] Built target basic_robot_control
+[0.061s] Invoked command in '/home/alecr/HRI_ws/build/rbe500-example' returned '0': AMENT_PREFIX_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alecr/HRI_ws/install/open_manipulator_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/alecr/HRI_ws/build/rbe500-example -- -j16 -l16
+[0.062s] Invoking command in '/home/alecr/HRI_ws/build/rbe500-example': AMENT_PREFIX_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alecr/HRI_ws/install/open_manipulator_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/alecr/HRI_ws/build/rbe500-example
+[0.068s] -- Install configuration: ""
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/lib/rbe500-example/basic_robot_control
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/ament_index/resource_index/package_run_dependencies/rbe500-example
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/ament_index/resource_index/parent_prefix_path/rbe500-example
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/environment/ament_prefix_path.sh
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/environment/ament_prefix_path.dsv
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/environment/path.sh
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/environment/path.dsv
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/local_setup.bash
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/local_setup.sh
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/local_setup.zsh
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/local_setup.dsv
+[0.068s] -- Installing: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/package.dsv
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/ament_index/resource_index/packages/rbe500-example
+[0.068s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/cmake/rbe500-exampleConfig.cmake
+[0.069s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/cmake/rbe500-exampleConfig-version.cmake
+[0.069s] -- Up-to-date: /home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/package.xml
+[0.077s] Invoked command in '/home/alecr/HRI_ws/build/rbe500-example' returned '0': AMENT_PREFIX_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/alecr/HRI_ws/install/open_manipulator_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alecr/HRI_ws/install/open_manipulator_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/alecr/HRI_ws/build/rbe500-example

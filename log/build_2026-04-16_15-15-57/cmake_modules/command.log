@@ -1,0 +1,6 @@
+Invoking command in '/home/alecr/HRI_ws/build/cmake_modules': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/alecr/HRI_ws/src/open_manipulator_dependencies/cmake_modules -DCMAKE_INSTALL_PREFIX=/home/alecr/HRI_ws/install/cmake_modules
+Invoked command in '/home/alecr/HRI_ws/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/alecr/HRI_ws/src/open_manipulator_dependencies/cmake_modules -DCMAKE_INSTALL_PREFIX=/home/alecr/HRI_ws/install/cmake_modules
+Invoking command in '/home/alecr/HRI_ws/build/cmake_modules': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/alecr/HRI_ws/build/cmake_modules -- -j16 -l16
+Invoked command in '/home/alecr/HRI_ws/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/alecr/HRI_ws/build/cmake_modules -- -j16 -l16
+Invoking command in '/home/alecr/HRI_ws/build/cmake_modules': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/alecr/HRI_ws/build/cmake_modules
+Invoked command in '/home/alecr/HRI_ws/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/alecr/HRI_ws/build/cmake_modules

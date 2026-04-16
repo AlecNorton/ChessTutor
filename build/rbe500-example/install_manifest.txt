@@ -1,0 +1,16 @@
+/home/alecr/HRI_ws/install/rbe500-example/lib/rbe500-example/basic_robot_control
+/home/alecr/HRI_ws/install/rbe500-example/share/ament_index/resource_index/package_run_dependencies/rbe500-example
+/home/alecr/HRI_ws/install/rbe500-example/share/ament_index/resource_index/parent_prefix_path/rbe500-example
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/environment/ament_prefix_path.sh
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/environment/ament_prefix_path.dsv
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/environment/path.sh
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/environment/path.dsv
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/local_setup.bash
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/local_setup.sh
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/local_setup.zsh
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/local_setup.dsv
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/package.dsv
+/home/alecr/HRI_ws/install/rbe500-example/share/ament_index/resource_index/packages/rbe500-example
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/cmake/rbe500-exampleConfig.cmake
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/cmake/rbe500-exampleConfig-version.cmake
+/home/alecr/HRI_ws/install/rbe500-example/share/rbe500-example/package.xml
