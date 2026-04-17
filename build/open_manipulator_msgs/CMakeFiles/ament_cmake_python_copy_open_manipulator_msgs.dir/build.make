@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alecr/HRI_ws/src/open_manipulator_msgs
+CMAKE_SOURCE_DIR = /home/alecr/HRI/src/open_manipulator_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alecr/HRI_ws/build/open_manipulator_msgs
+CMAKE_BINARY_DIR = /home/alecr/HRI/build/open_manipulator_msgs
 
 # Utility rule file for ament_cmake_python_copy_open_manipulator_msgs.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs.dir/compiler_de
 include CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs:
-	/usr/bin/cmake -E copy_directory /home/alecr/HRI_ws/build/open_manipulator_msgs/rosidl_generator_py/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs/ament_cmake_python/open_manipulator_msgs/open_manipulator_msgs
+	/usr/bin/cmake -E copy_directory /home/alecr/HRI/build/open_manipulator_msgs/rosidl_generator_py/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs/ament_cmake_python/open_manipulator_msgs/open_manipulator_msgs
 
 ament_cmake_python_copy_open_manipulator_msgs: CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs
 ament_cmake_python_copy_open_manipulator_msgs: CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs.dir/depend:
-	cd /home/alecr/HRI_ws/build/open_manipulator_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI_ws/src/open_manipulator_msgs /home/alecr/HRI_ws/src/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs/CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alecr/HRI/build/open_manipulator_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI/src/open_manipulator_msgs /home/alecr/HRI/src/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs/CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_open_manipulator_msgs.dir/depend
 

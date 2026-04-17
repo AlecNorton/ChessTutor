@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alecr/HRI_ws/src/open_manipulator_msgs
+CMAKE_SOURCE_DIR = /home/alecr/HRI/src/open_manipulator_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alecr/HRI_ws/build/open_manipulator_msgs
+CMAKE_BINARY_DIR = /home/alecr/HRI/build/open_manipulator_msgs
 
 # Utility rule file for open_manipulator_msgs.
 
@@ -66,25 +66,25 @@ include CMakeFiles/open_manipulator_msgs.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/open_manipulator_msgs.dir/progress.make
 
-CMakeFiles/open_manipulator_msgs: /home/alecr/HRI_ws/src/open_manipulator_msgs/msg/JointPosition.msg
-CMakeFiles/open_manipulator_msgs: /home/alecr/HRI_ws/src/open_manipulator_msgs/msg/KinematicsPose.msg
-CMakeFiles/open_manipulator_msgs: /home/alecr/HRI_ws/src/open_manipulator_msgs/msg/OpenManipulatorState.msg
-CMakeFiles/open_manipulator_msgs: /home/alecr/HRI_ws/src/open_manipulator_msgs/srv/GetJointPosition.srv
+CMakeFiles/open_manipulator_msgs: /home/alecr/HRI/src/open_manipulator_msgs/msg/JointPosition.msg
+CMakeFiles/open_manipulator_msgs: /home/alecr/HRI/src/open_manipulator_msgs/msg/KinematicsPose.msg
+CMakeFiles/open_manipulator_msgs: /home/alecr/HRI/src/open_manipulator_msgs/msg/OpenManipulatorState.msg
+CMakeFiles/open_manipulator_msgs: /home/alecr/HRI/src/open_manipulator_msgs/srv/GetJointPosition.srv
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/GetJointPosition_Request.msg
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/GetJointPosition_Response.msg
-CMakeFiles/open_manipulator_msgs: /home/alecr/HRI_ws/src/open_manipulator_msgs/srv/GetKinematicsPose.srv
+CMakeFiles/open_manipulator_msgs: /home/alecr/HRI/src/open_manipulator_msgs/srv/GetKinematicsPose.srv
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/GetKinematicsPose_Request.msg
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/GetKinematicsPose_Response.msg
-CMakeFiles/open_manipulator_msgs: /home/alecr/HRI_ws/src/open_manipulator_msgs/srv/SetJointPosition.srv
+CMakeFiles/open_manipulator_msgs: /home/alecr/HRI/src/open_manipulator_msgs/srv/SetJointPosition.srv
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/SetJointPosition_Request.msg
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/SetJointPosition_Response.msg
-CMakeFiles/open_manipulator_msgs: /home/alecr/HRI_ws/src/open_manipulator_msgs/srv/SetKinematicsPose.srv
+CMakeFiles/open_manipulator_msgs: /home/alecr/HRI/src/open_manipulator_msgs/srv/SetKinematicsPose.srv
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/SetKinematicsPose_Request.msg
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/SetKinematicsPose_Response.msg
-CMakeFiles/open_manipulator_msgs: /home/alecr/HRI_ws/src/open_manipulator_msgs/srv/SetDrawingTrajectory.srv
+CMakeFiles/open_manipulator_msgs: /home/alecr/HRI/src/open_manipulator_msgs/srv/SetDrawingTrajectory.srv
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/SetDrawingTrajectory_Request.msg
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/SetDrawingTrajectory_Response.msg
-CMakeFiles/open_manipulator_msgs: /home/alecr/HRI_ws/src/open_manipulator_msgs/srv/SetActuatorState.srv
+CMakeFiles/open_manipulator_msgs: /home/alecr/HRI/src/open_manipulator_msgs/srv/SetActuatorState.srv
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/SetActuatorState_Request.msg
 CMakeFiles/open_manipulator_msgs: rosidl_cmake/srv/SetActuatorState_Response.msg
 CMakeFiles/open_manipulator_msgs: /opt/ros/humble/share/std_msgs/msg/Bool.idl
@@ -163,6 +163,6 @@ CMakeFiles/open_manipulator_msgs.dir/clean:
 .PHONY : CMakeFiles/open_manipulator_msgs.dir/clean
 
 CMakeFiles/open_manipulator_msgs.dir/depend:
-	cd /home/alecr/HRI_ws/build/open_manipulator_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI_ws/src/open_manipulator_msgs /home/alecr/HRI_ws/src/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs/CMakeFiles/open_manipulator_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alecr/HRI/build/open_manipulator_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI/src/open_manipulator_msgs /home/alecr/HRI/src/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs/CMakeFiles/open_manipulator_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/open_manipulator_msgs.dir/depend
 

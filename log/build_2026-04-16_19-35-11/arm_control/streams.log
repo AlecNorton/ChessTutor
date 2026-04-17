@@ -1,0 +1,34 @@
+[0.480s] Invoking command in '/home/alecr/HRI/src/arm_control': PYTHONPATH=/home/alecr/HRI/build/arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alecr/HRI/install/arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arm_control build --build-base /home/alecr/HRI/build/arm_control/build install --record /home/alecr/HRI/build/arm_control/install.log --single-version-externally-managed install_data
+[0.653s] running egg_info
+[0.654s] writing ../../build/arm_control/arm_control.egg-info/PKG-INFO
+[0.654s] writing dependency_links to ../../build/arm_control/arm_control.egg-info/dependency_links.txt
+[0.654s] writing entry points to ../../build/arm_control/arm_control.egg-info/entry_points.txt
+[0.654s] writing requirements to ../../build/arm_control/arm_control.egg-info/requires.txt
+[0.654s] writing top-level names to ../../build/arm_control/arm_control.egg-info/top_level.txt
+[0.655s] reading manifest file '../../build/arm_control/arm_control.egg-info/SOURCES.txt'
+[0.656s] writing manifest file '../../build/arm_control/arm_control.egg-info/SOURCES.txt'
+[0.656s] running build
+[0.656s] running build_py
+[0.656s] copying arm_control/arm_control_task.py -> /home/alecr/HRI/build/arm_control/build/lib/arm_control
+[0.656s] copying arm_control/chess_interface.py -> /home/alecr/HRI/build/arm_control/build/lib/arm_control
+[0.656s] running install
+[0.656s] running install_lib
+[0.657s] copying /home/alecr/HRI/build/arm_control/build/lib/arm_control/arm_control_task.py -> /home/alecr/HRI/install/arm_control/lib/python3.10/site-packages/arm_control
+[0.657s] copying /home/alecr/HRI/build/arm_control/build/lib/arm_control/chess_interface.py -> /home/alecr/HRI/install/arm_control/lib/python3.10/site-packages/arm_control
+[0.657s] byte-compiling /home/alecr/HRI/install/arm_control/lib/python3.10/site-packages/arm_control/arm_control_task.py to arm_control_task.cpython-310.pyc
+[0.658s] byte-compiling /home/alecr/HRI/install/arm_control/lib/python3.10/site-packages/arm_control/chess_interface.py to chess_interface.cpython-310.pyc
+[0.658s]   File "/home/alecr/HRI/install/arm_control/lib/python3.10/site-packages/arm_control/chess_interface.py", line 48
+[0.658s]     ,"a6": [- -0.7040972113609314, -0.19174760580062866, 0.46172821521759033, 1.3084856271743774, -0.014243011772632598
+[0.658s]     ^
+[0.658s] SyntaxError: invalid syntax
+[0.658s] 
+[0.658s] running install_data
+[0.658s] running install_egg_info
+[0.659s] removing '/home/alecr/HRI/install/arm_control/lib/python3.10/site-packages/arm_control-0.0.0-py3.10.egg-info' (and everything under it)
+[0.659s] Copying ../../build/arm_control/arm_control.egg-info to /home/alecr/HRI/install/arm_control/lib/python3.10/site-packages/arm_control-0.0.0-py3.10.egg-info
+[0.660s] running install_scripts
+[0.674s] Installing arm script to /home/alecr/HRI/install/arm_control/lib/arm_control
+[0.674s] Installing arm_t script to /home/alecr/HRI/install/arm_control/lib/arm_control
+[0.674s] Installing input script to /home/alecr/HRI/install/arm_control/lib/arm_control
+[0.674s] writing list of installed files to '/home/alecr/HRI/build/arm_control/install.log'
+[0.688s] Invoked command in '/home/alecr/HRI/src/arm_control' returned '0': PYTHONPATH=/home/alecr/HRI/build/arm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alecr/HRI/install/arm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arm_control build --build-base /home/alecr/HRI/build/arm_control/build install --record /home/alecr/HRI/build/arm_control/install.log --single-version-externally-managed install_data

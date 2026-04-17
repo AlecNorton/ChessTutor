@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alecr/HRI_ws/src/open_manipulator_msgs
+CMAKE_SOURCE_DIR = /home/alecr/HRI/src/open_manipulator_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alecr/HRI_ws/build/open_manipulator_msgs
+CMAKE_BINARY_DIR = /home/alecr/HRI/build/open_manipulator_msgs
 
 # Utility rule file for open_manipulator_msgs_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/open_manipulator_msgs_uninstall.dir/compiler_depend.make
 include CMakeFiles/open_manipulator_msgs_uninstall.dir/progress.make
 
 CMakeFiles/open_manipulator_msgs_uninstall:
-	/usr/bin/cmake -P /home/alecr/HRI_ws/build/open_manipulator_msgs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/alecr/HRI/build/open_manipulator_msgs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 open_manipulator_msgs_uninstall: CMakeFiles/open_manipulator_msgs_uninstall
 open_manipulator_msgs_uninstall: CMakeFiles/open_manipulator_msgs_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/open_manipulator_msgs_uninstall.dir/clean:
 .PHONY : CMakeFiles/open_manipulator_msgs_uninstall.dir/clean
 
 CMakeFiles/open_manipulator_msgs_uninstall.dir/depend:
-	cd /home/alecr/HRI_ws/build/open_manipulator_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI_ws/src/open_manipulator_msgs /home/alecr/HRI_ws/src/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs /home/alecr/HRI_ws/build/open_manipulator_msgs/CMakeFiles/open_manipulator_msgs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alecr/HRI/build/open_manipulator_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI/src/open_manipulator_msgs /home/alecr/HRI/src/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs /home/alecr/HRI/build/open_manipulator_msgs/CMakeFiles/open_manipulator_msgs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/open_manipulator_msgs_uninstall.dir/depend
 

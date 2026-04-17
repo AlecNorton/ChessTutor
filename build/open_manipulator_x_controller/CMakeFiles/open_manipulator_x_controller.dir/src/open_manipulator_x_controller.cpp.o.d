@@ -1,7 +1,7 @@
 CMakeFiles/open_manipulator_x_controller.dir/src/open_manipulator_x_controller.cpp.o: \
- /home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_controller/src/open_manipulator_x_controller.cpp \
+ /home/alecr/HRI/src/open_manipulator/open_manipulator_x_controller/src/open_manipulator_x_controller.cpp \
  /usr/include/stdc-predef.h \
- /home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_controller/include/open_manipulator_x_controller/open_manipulator_x_controller.hpp \
+ /home/alecr/HRI/src/open_manipulator/open_manipulator_x_controller/include/open_manipulator_x_controller/open_manipulator_x_controller.hpp \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -667,50 +667,50 @@ CMakeFiles/open_manipulator_x_controller.dir/src/open_manipulator_x_controller.c
  /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/joint_trajectory_point.hpp \
  /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory_point__builder.hpp \
  /opt/ros/humble/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory_point__type_support.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/set_joint_position.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_joint_position__struct.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/joint_position__struct.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_joint_position__builder.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_joint_position__traits.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/joint_position__traits.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_joint_position__type_support.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/set_kinematics_pose.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_kinematics_pose__struct.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/kinematics_pose__struct.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_kinematics_pose__builder.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_kinematics_pose__traits.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/kinematics_pose__traits.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_kinematics_pose__type_support.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/set_drawing_trajectory.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_drawing_trajectory__struct.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_drawing_trajectory__builder.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_drawing_trajectory__traits.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_drawing_trajectory__type_support.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/set_actuator_state.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_actuator_state__struct.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_actuator_state__builder.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_actuator_state__traits.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_actuator_state__type_support.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/get_joint_position.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_joint_position__struct.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_joint_position__builder.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_joint_position__traits.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_joint_position__type_support.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/get_kinematics_pose.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_kinematics_pose__struct.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_kinematics_pose__builder.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_kinematics_pose__traits.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_kinematics_pose__type_support.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/open_manipulator_state.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/open_manipulator_state__struct.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/open_manipulator_state__builder.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/open_manipulator_state__traits.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/open_manipulator_state__type_support.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_x_libs/include/open_manipulator_x_libs/open_manipulator_x.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_x_libs/include/open_manipulator_x_libs/dynamixel.hpp \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_common.h \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/set_joint_position.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_joint_position__struct.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/joint_position__struct.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_joint_position__builder.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_joint_position__traits.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/joint_position__traits.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_joint_position__type_support.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/set_kinematics_pose.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_kinematics_pose__struct.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/kinematics_pose__struct.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_kinematics_pose__builder.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_kinematics_pose__traits.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/kinematics_pose__traits.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_kinematics_pose__type_support.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/set_drawing_trajectory.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_drawing_trajectory__struct.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_drawing_trajectory__builder.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_drawing_trajectory__traits.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_drawing_trajectory__type_support.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/set_actuator_state.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_actuator_state__struct.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_actuator_state__builder.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_actuator_state__traits.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/set_actuator_state__type_support.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/get_joint_position.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_joint_position__struct.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_joint_position__builder.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_joint_position__traits.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_joint_position__type_support.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/get_kinematics_pose.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_kinematics_pose__struct.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_kinematics_pose__builder.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_kinematics_pose__traits.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/srv/detail/get_kinematics_pose__type_support.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/open_manipulator_state.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/open_manipulator_state__struct.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/open_manipulator_state__builder.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/open_manipulator_state__traits.hpp \
+ /home/alecr/HRI/install/open_manipulator_msgs/include/open_manipulator_msgs/open_manipulator_msgs/msg/detail/open_manipulator_state__type_support.hpp \
+ /home/alecr/HRI/install/open_manipulator_x_libs/include/open_manipulator_x_libs/open_manipulator_x.hpp \
+ /home/alecr/HRI/install/open_manipulator_x_libs/include/open_manipulator_x_libs/dynamixel.hpp \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_common.h \
  /usr/include/eigen3/Eigen/Eigen /usr/include/eigen3/Eigen/Dense \
  /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
@@ -985,21 +985,21 @@ CMakeFiles/open_manipulator_x_controller.dir/src/open_manipulator_x_controller.c
  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
  /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
  /usr/include/eigen3/Eigen/LU /usr/include/c++/11/math.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_math.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_log.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_manager.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_trajectory_generator.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_math.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_log.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_manager.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_trajectory_generator.h \
  /usr/include/eigen3/Eigen/QR \
- /home/alecr/HRI_ws/install/dynamixel_workbench_toolbox/include/dynamixel_workbench_toolbox/dynamixel_workbench.h \
- /home/alecr/HRI_ws/install/dynamixel_workbench_toolbox/include/dynamixel_workbench_toolbox/dynamixel_driver.h \
- /home/alecr/HRI_ws/install/dynamixel_workbench_toolbox/include/dynamixel_workbench_toolbox/dynamixel_tool.h \
- /home/alecr/HRI_ws/install/dynamixel_workbench_toolbox/include/dynamixel_workbench_toolbox/dynamixel_item.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/port_handler.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_write.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_read.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h \
- /home/alecr/HRI_ws/install/open_manipulator_x_libs/include/open_manipulator_x_libs/custom_trajectory.hpp \
- /home/alecr/HRI_ws/install/open_manipulator_x_libs/include/open_manipulator_x_libs/kinematics.hpp
+ /home/alecr/HRI/install/dynamixel_workbench_toolbox/include/dynamixel_workbench_toolbox/dynamixel_workbench.h \
+ /home/alecr/HRI/install/dynamixel_workbench_toolbox/include/dynamixel_workbench_toolbox/dynamixel_driver.h \
+ /home/alecr/HRI/install/dynamixel_workbench_toolbox/include/dynamixel_workbench_toolbox/dynamixel_tool.h \
+ /home/alecr/HRI/install/dynamixel_workbench_toolbox/include/dynamixel_workbench_toolbox/dynamixel_item.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/port_handler.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_write.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_read.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h \
+ /home/alecr/HRI/install/open_manipulator_x_libs/include/open_manipulator_x_libs/custom_trajectory.hpp \
+ /home/alecr/HRI/install/open_manipulator_x_libs/include/open_manipulator_x_libs/kinematics.hpp

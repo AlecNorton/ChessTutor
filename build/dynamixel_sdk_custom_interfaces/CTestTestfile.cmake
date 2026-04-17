@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/alecr/HRI_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces
-# Build directory: /home/alecr/HRI_ws/build/dynamixel_sdk_custom_interfaces
+# Source directory: /home/alecr/HRI/src/DynamixelSDK/dynamixel_sdk_custom_interfaces
+# Build directory: /home/alecr/HRI/build/dynamixel_sdk_custom_interfaces
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

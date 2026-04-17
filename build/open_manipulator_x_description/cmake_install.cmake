@@ -1,8 +1,8 @@
-# Install script for directory: /home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_description
+# Install script for directory: /home/alecr/HRI/src/open_manipulator/open_manipulator_x_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/alecr/HRI_ws/install/open_manipulator_x_description")
+  set(CMAKE_INSTALL_PREFIX "/home/alecr/HRI/install/open_manipulator_x_description")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,19 +44,19 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE DIRECTORY FILES
-    "/home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_description/launch"
-    "/home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_description/meshes"
-    "/home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_description/rviz"
-    "/home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_description/urdf"
+    "/home/alecr/HRI/src/open_manipulator/open_manipulator_x_description/launch"
+    "/home/alecr/HRI/src/open_manipulator/open_manipulator_x_description/meshes"
+    "/home/alecr/HRI/src/open_manipulator/open_manipulator_x_description/rviz"
+    "/home/alecr/HRI/src/open_manipulator/open_manipulator_x_description/urdf"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/open_manipulator_x_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/open_manipulator_x_description")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/open_manipulator_x_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/open_manipulator_x_description")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -64,7 +64,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description/environment" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description/environment" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -72,42 +72,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description/environment" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description/environment" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_index/share/ament_index/resource_index/packages/open_manipulator_x_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_index/share/ament_index/resource_index/packages/open_manipulator_x_description")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description/cmake" TYPE FILE FILES
-    "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_core/open_manipulator_x_descriptionConfig.cmake"
-    "/home/alecr/HRI_ws/build/open_manipulator_x_description/ament_cmake_core/open_manipulator_x_descriptionConfig-version.cmake"
+    "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_core/open_manipulator_x_descriptionConfig.cmake"
+    "/home/alecr/HRI/build/open_manipulator_x_description/ament_cmake_core/open_manipulator_x_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/open_manipulator_x_description" TYPE FILE FILES "/home/alecr/HRI/src/open_manipulator/open_manipulator_x_description/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -118,5 +118,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/alecr/HRI_ws/build/open_manipulator_x_description/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/alecr/HRI/build/open_manipulator_x_description/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

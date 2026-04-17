@@ -1,9 +1,9 @@
 CMakeFiles/dynamixel_workbench_toolbox.dir/src/dynamixel_workbench_toolbox/dynamixel_workbench.cpp.o: \
- /home/alecr/HRI_ws/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/dynamixel_workbench.cpp \
+ /home/alecr/HRI/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/dynamixel_workbench.cpp \
  /usr/include/stdc-predef.h \
- /home/alecr/HRI_ws/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/../../include/dynamixel_workbench_toolbox/dynamixel_workbench.h \
- /home/alecr/HRI_ws/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/../../include/dynamixel_workbench_toolbox/dynamixel_driver.h \
- /home/alecr/HRI_ws/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/../../include/dynamixel_workbench_toolbox/dynamixel_tool.h \
+ /home/alecr/HRI/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/../../include/dynamixel_workbench_toolbox/dynamixel_workbench.h \
+ /home/alecr/HRI/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/../../include/dynamixel_workbench_toolbox/dynamixel_driver.h \
+ /home/alecr/HRI/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/../../include/dynamixel_workbench_toolbox/dynamixel_tool.h \
  /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -31,7 +31,7 @@ CMakeFiles/dynamixel_workbench_toolbox.dir/src/dynamixel_workbench_toolbox/dynam
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /home/alecr/HRI_ws/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/../../include/dynamixel_workbench_toolbox/dynamixel_item.h \
+ /home/alecr/HRI/src/dynamixel-workbench/dynamixel_workbench_toolbox/src/dynamixel_workbench_toolbox/../../include/dynamixel_workbench_toolbox/dynamixel_item.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
@@ -43,8 +43,8 @@ CMakeFiles/dynamixel_workbench_toolbox.dir/src/dynamixel_workbench_toolbox/dynam
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -91,8 +91,8 @@ CMakeFiles/dynamixel_workbench_toolbox.dir/src/dynamixel_workbench_toolbox/dynam
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/port_handler.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_write.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_read.h \
- /home/alecr/HRI_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/port_handler.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_write.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_read.h \
+ /home/alecr/HRI/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h

@@ -1,0 +1,17 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/alecr/HRI/build/open_manipulator/CMakeCache.txt is different than the directory /home/alecr/HRI_ws/build/open_manipulator where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+-- Install configuration: ""
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/ament_index/resource_index/package_run_dependencies/open_manipulator
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/ament_index/resource_index/parent_prefix_path/open_manipulator
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/environment/ament_prefix_path.sh
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/environment/path.sh
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/environment/path.dsv
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/local_setup.bash
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/local_setup.sh
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/local_setup.zsh
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/local_setup.dsv
+-- Installing: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/package.dsv
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/ament_index/resource_index/packages/open_manipulator
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/cmake/open_manipulatorConfig.cmake
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/cmake/open_manipulatorConfig-version.cmake
+-- Up-to-date: /home/alecr/HRI_ws/install/open_manipulator/share/open_manipulator/package.xml

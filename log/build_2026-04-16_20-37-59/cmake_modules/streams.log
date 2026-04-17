@@ -1,0 +1,32 @@
+[0.024s] Invoking command in '/home/alecr/HRI/build/cmake_modules': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alecr/HRI/install/rbe500_example_py:/home/alecr/HRI/install/arm_control:/home/alecr/ros2_ws/install/moveit_configs_utils:/home/alecr/ros2_ws/install/mqp_ros:/home/alecr/ros2_ws/install/mqp:/home/alecr/ros2_ws/install/launch_param_builder:/home/alecr/ros2_ws/install/MQP:/home/alecr/ros2_ws/install/HRI:/opt/ros/humble /usr/bin/cmake --build /home/alecr/HRI/build/cmake_modules -- -j16 -l16
+[0.233s] Invoked command in '/home/alecr/HRI/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alecr/HRI/install/rbe500_example_py:/home/alecr/HRI/install/arm_control:/home/alecr/ros2_ws/install/moveit_configs_utils:/home/alecr/ros2_ws/install/mqp_ros:/home/alecr/ros2_ws/install/mqp:/home/alecr/ros2_ws/install/launch_param_builder:/home/alecr/ros2_ws/install/MQP:/home/alecr/ros2_ws/install/HRI:/opt/ros/humble /usr/bin/cmake --build /home/alecr/HRI/build/cmake_modules -- -j16 -l16
+[0.234s] Invoking command in '/home/alecr/HRI/build/cmake_modules': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alecr/HRI/install/rbe500_example_py:/home/alecr/HRI/install/arm_control:/home/alecr/ros2_ws/install/moveit_configs_utils:/home/alecr/ros2_ws/install/mqp_ros:/home/alecr/ros2_ws/install/mqp:/home/alecr/ros2_ws/install/launch_param_builder:/home/alecr/ros2_ws/install/MQP:/home/alecr/ros2_ws/install/HRI:/opt/ros/humble /usr/bin/cmake --install /home/alecr/HRI/build/cmake_modules
+[0.239s] -- Install configuration: ""
+[0.239s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules
+[0.239s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules/FindXenomai.cmake
+[0.239s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules/FindTBB.cmake
+[0.239s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules/FindNUMPY.cmake
+[0.239s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules/FindUUID.cmake
+[0.239s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules/FindPoco.cmake
+[0.239s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules/FindGflags.cmake
+[0.239s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules/FindTinyXML2.cmake
+[0.240s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules/FindGSL.cmake
+[0.240s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/Modules/FindTinyXML.cmake
+[0.240s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/ament_index/resource_index/package_run_dependencies/cmake_modules
+[0.240s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/ament_index/resource_index/parent_prefix_path/cmake_modules
+[0.241s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/environment/ament_prefix_path.sh
+[0.241s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/environment/ament_prefix_path.dsv
+[0.241s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/environment/path.sh
+[0.242s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/environment/path.dsv
+[0.242s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/local_setup.bash
+[0.243s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/local_setup.sh
+[0.243s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/local_setup.zsh
+[0.244s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/local_setup.dsv
+[0.244s] -- Installing: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/package.dsv
+[0.244s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/ament_index/resource_index/packages/cmake_modules
+[0.244s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/cmake_modules-extras.cmake
+[0.244s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.245s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/cmake_modulesConfig.cmake
+[0.245s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/cmake/cmake_modulesConfig-version.cmake
+[0.245s] -- Up-to-date: /home/alecr/HRI/install/cmake_modules/share/cmake_modules/package.xml
+[0.249s] Invoked command in '/home/alecr/HRI/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alecr/HRI/install/rbe500_example_py:/home/alecr/HRI/install/arm_control:/home/alecr/ros2_ws/install/moveit_configs_utils:/home/alecr/ros2_ws/install/mqp_ros:/home/alecr/ros2_ws/install/mqp:/home/alecr/ros2_ws/install/launch_param_builder:/home/alecr/ros2_ws/install/MQP:/home/alecr/ros2_ws/install/HRI:/opt/ros/humble /usr/bin/cmake --install /home/alecr/HRI/build/cmake_modules

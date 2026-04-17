@@ -1,8 +1,8 @@
-# Install script for directory: /home/alecr/HRI_ws/build/open_manipulator_msgs/open_manipulator_msgs__py
+# Install script for directory: /home/alecr/HRI/build/open_manipulator_msgs/open_manipulator_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/alecr/HRI_ws/install/open_manipulator_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/alecr/HRI/install/open_manipulator_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

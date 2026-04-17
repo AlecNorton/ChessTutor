@@ -1,8 +1,8 @@
-# Install script for directory: /home/alecr/HRI_ws/src/open_manipulator_dependencies/cmake_modules
+# Install script for directory: /home/alecr/HRI/src/open_manipulator_dependencies/cmake_modules
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/alecr/HRI_ws/install/cmake_modules")
+  set(CMAKE_INSTALL_PREFIX "/home/alecr/HRI/install/cmake_modules")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,15 +43,15 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/cmake" TYPE DIRECTORY FILES "/home/alecr/HRI_ws/src/open_manipulator_dependencies/cmake_modules/cmake/Modules")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/cmake" TYPE DIRECTORY FILES "/home/alecr/HRI/src/open_manipulator_dependencies/cmake_modules/cmake/Modules")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cmake_modules")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cmake_modules")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cmake_modules")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cmake_modules")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/environment" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/environment" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -67,50 +67,50 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/environment" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/environment" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_index/share/ament_index/resource_index/packages/cmake_modules")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_index/share/ament_index/resource_index/packages/cmake_modules")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/cmake" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_core/cmake_modules-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/cmake" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_core/cmake_modules-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/cmake" TYPE FILE FILES "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/cmake" TYPE FILE FILES "/home/alecr/HRI/build/cmake_modules/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules/cmake" TYPE FILE FILES
-    "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_core/cmake_modulesConfig.cmake"
-    "/home/alecr/HRI_ws/build/cmake_modules/ament_cmake_core/cmake_modulesConfig-version.cmake"
+    "/home/alecr/HRI/build/cmake_modules/ament_cmake_core/cmake_modulesConfig.cmake"
+    "/home/alecr/HRI/build/cmake_modules/ament_cmake_core/cmake_modulesConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI_ws/src/open_manipulator_dependencies/cmake_modules/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cmake_modules" TYPE FILE FILES "/home/alecr/HRI/src/open_manipulator_dependencies/cmake_modules/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -121,5 +121,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/alecr/HRI_ws/build/cmake_modules/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/alecr/HRI/build/cmake_modules/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

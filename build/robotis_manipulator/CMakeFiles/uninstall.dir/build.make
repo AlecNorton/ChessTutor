@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alecr/HRI_ws/src/robotis_manipulator
+CMAKE_SOURCE_DIR = /home/alecr/HRI/src/robotis_manipulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alecr/HRI_ws/build/robotis_manipulator
+CMAKE_BINARY_DIR = /home/alecr/HRI/build/robotis_manipulator
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/alecr/HRI_ws/build/robotis_manipulator && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI_ws/src/robotis_manipulator /home/alecr/HRI_ws/src/robotis_manipulator /home/alecr/HRI_ws/build/robotis_manipulator /home/alecr/HRI_ws/build/robotis_manipulator /home/alecr/HRI_ws/build/robotis_manipulator/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alecr/HRI/build/robotis_manipulator && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI/src/robotis_manipulator /home/alecr/HRI/src/robotis_manipulator /home/alecr/HRI/build/robotis_manipulator /home/alecr/HRI/build/robotis_manipulator /home/alecr/HRI/build/robotis_manipulator/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

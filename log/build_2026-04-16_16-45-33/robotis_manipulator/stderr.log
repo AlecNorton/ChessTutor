@@ -1,0 +1,1 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/alecr/HRI/build/robotis_manipulator/CMakeCache.txt is different than the directory /home/alecr/HRI_ws/build/robotis_manipulator where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m

@@ -1,7 +1,7 @@
 CMakeFiles/robotis_manipulator.dir/src/robotis_manipulator/robotis_manipulator_math.cpp.o: \
- /home/alecr/HRI_ws/src/robotis_manipulator/src/robotis_manipulator/robotis_manipulator_math.cpp \
+ /home/alecr/HRI/src/robotis_manipulator/src/robotis_manipulator/robotis_manipulator_math.cpp \
  /usr/include/stdc-predef.h \
- /home/alecr/HRI_ws/src/robotis_manipulator/src/robotis_manipulator/../../include/robotis_manipulator/robotis_manipulator_math.h \
+ /home/alecr/HRI/src/robotis_manipulator/src/robotis_manipulator/../../include/robotis_manipulator/robotis_manipulator_math.h \
  /usr/include/unistd.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

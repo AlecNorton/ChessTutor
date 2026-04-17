@@ -1,9 +1,9 @@
 CMakeFiles/open_manipulator_x_libs.dir/src/kinematics.cpp.o: \
- /home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp \
+ /home/alecr/HRI/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp \
  /usr/include/stdc-predef.h \
- /home/alecr/HRI_ws/src/open_manipulator/open_manipulator_x_libs/src/../include/open_manipulator_x_libs/kinematics.hpp \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_common.h \
+ /home/alecr/HRI/src/open_manipulator/open_manipulator_x_libs/src/../include/open_manipulator_x_libs/kinematics.hpp \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_common.h \
  /usr/include/unistd.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -489,8 +489,8 @@ CMakeFiles/open_manipulator_x_libs.dir/src/kinematics.cpp.o: \
  /usr/include/c++/11/bits/allocated_ptr.h \
  /usr/include/c++/11/bits/list.tcc /usr/include/eigen3/Eigen/LU \
  /usr/include/c++/11/math.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_math.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_log.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_manager.h \
- /home/alecr/HRI_ws/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_trajectory_generator.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_math.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_log.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_manager.h \
+ /home/alecr/HRI/install/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_trajectory_generator.h \
  /usr/include/eigen3/Eigen/QR

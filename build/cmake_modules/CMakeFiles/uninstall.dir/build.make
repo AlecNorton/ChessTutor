@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alecr/HRI_ws/src/open_manipulator_dependencies/cmake_modules
+CMAKE_SOURCE_DIR = /home/alecr/HRI/src/open_manipulator_dependencies/cmake_modules
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alecr/HRI_ws/build/cmake_modules
+CMAKE_BINARY_DIR = /home/alecr/HRI/build/cmake_modules
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/alecr/HRI_ws/build/cmake_modules && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI_ws/src/open_manipulator_dependencies/cmake_modules /home/alecr/HRI_ws/src/open_manipulator_dependencies/cmake_modules /home/alecr/HRI_ws/build/cmake_modules /home/alecr/HRI_ws/build/cmake_modules /home/alecr/HRI_ws/build/cmake_modules/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alecr/HRI/build/cmake_modules && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alecr/HRI/src/open_manipulator_dependencies/cmake_modules /home/alecr/HRI/src/open_manipulator_dependencies/cmake_modules /home/alecr/HRI/build/cmake_modules /home/alecr/HRI/build/cmake_modules /home/alecr/HRI/build/cmake_modules/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

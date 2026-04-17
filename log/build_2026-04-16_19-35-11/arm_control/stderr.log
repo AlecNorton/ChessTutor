@@ -1,0 +1,5 @@
+  File "/home/alecr/HRI/install/arm_control/lib/python3.10/site-packages/arm_control/chess_interface.py", line 48
+    ,"a6": [- -0.7040972113609314, -0.19174760580062866, 0.46172821521759033, 1.3084856271743774, -0.014243011772632598
+    ^
+SyntaxError: invalid syntax
+
