@@ -1,4 +1,0 @@
-Invoking command in '/home/alecr/HRI_ws/build/open_manipulator_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/alecr/HRI_ws/build/open_manipulator_msgs -- -j16 -l16
-Invoked command in '/home/alecr/HRI_ws/build/open_manipulator_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/alecr/HRI_ws/build/open_manipulator_msgs -- -j16 -l16
-Invoking command in '/home/alecr/HRI_ws/build/open_manipulator_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/alecr/HRI_ws/build/open_manipulator_msgs
-Invoked command in '/home/alecr/HRI_ws/build/open_manipulator_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/alecr/HRI_ws/build/open_manipulator_msgs

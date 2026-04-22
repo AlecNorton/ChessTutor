@@ -1,5 +1,0 @@
-[console_scripts]
-arm = arm_control.arm_control:main
-arm_t = arm_control.arm_control_task:main
-input = arm_control.chess_interface:main
-
