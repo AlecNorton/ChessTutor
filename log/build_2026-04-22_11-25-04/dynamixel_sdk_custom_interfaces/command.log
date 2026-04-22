@@ -1,0 +1,4 @@
+Invoking command in '/home/alecr/HRI/build/dynamixel_sdk_custom_interfaces': /usr/bin/cmake --build /home/alecr/HRI/build/dynamixel_sdk_custom_interfaces -- -j16 -l16
+Invoked command in '/home/alecr/HRI/build/dynamixel_sdk_custom_interfaces' returned '0': /usr/bin/cmake --build /home/alecr/HRI/build/dynamixel_sdk_custom_interfaces -- -j16 -l16
+Invoking command in '/home/alecr/HRI/build/dynamixel_sdk_custom_interfaces': /usr/bin/cmake --install /home/alecr/HRI/build/dynamixel_sdk_custom_interfaces
+Invoked command in '/home/alecr/HRI/build/dynamixel_sdk_custom_interfaces' returned '0': /usr/bin/cmake --install /home/alecr/HRI/build/dynamixel_sdk_custom_interfaces
