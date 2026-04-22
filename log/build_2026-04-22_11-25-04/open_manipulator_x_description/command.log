@@ -1,4 +1,0 @@
-Invoking command in '/home/alecr/HRI/build/open_manipulator_x_description': /usr/bin/cmake --build /home/alecr/HRI/build/open_manipulator_x_description -- -j16 -l16
-Invoked command in '/home/alecr/HRI/build/open_manipulator_x_description' returned '0': /usr/bin/cmake --build /home/alecr/HRI/build/open_manipulator_x_description -- -j16 -l16
-Invoking command in '/home/alecr/HRI/build/open_manipulator_x_description': /usr/bin/cmake --install /home/alecr/HRI/build/open_manipulator_x_description
-Invoked command in '/home/alecr/HRI/build/open_manipulator_x_description' returned '0': /usr/bin/cmake --install /home/alecr/HRI/build/open_manipulator_x_description
