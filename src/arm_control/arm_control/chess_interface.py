@@ -41,7 +41,7 @@ class Interface(Node):
 
     def __init__(self):
         super().__init__('Robot_Control')
-        self.command_joints = self.create_publisher(Float32MultiArray, 'chess_joints', 10)
+        self.command_joints = self.create_publisher(Float32MultiArray, 'chess_pos', 10)
 
         
         #print("Did a data: ", data)
@@ -58,7 +58,7 @@ class Interface(Node):
 def main(args=None):
     rclpy.init(args=args)
     valid_letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-    valid_numbers = ['1', '2', '3', '4', '5', '6', '7', '8']
+    valid_numbers = ['1', '2', '3', '4', '5']
     interface = Interface()
     a1 = [0.1,0.06,0.05,-0.20429387342668381,0.6661030581833234,0.21033662531077235,0.6858055360027521]
 

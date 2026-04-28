@@ -46,7 +46,7 @@ class RobotControl(Node):
         super().__init__('Robot_Control')
         self.subscription = self.create_subscription(
             Float32MultiArray,
-            'chess_joints',
+            'chess_pos',
             self.recv_command,
             10)
         self.client = self.create_client(SetKinematicsPose, 'goal_task_space_path')
