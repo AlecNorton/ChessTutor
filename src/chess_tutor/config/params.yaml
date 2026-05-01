@@ -6,7 +6,7 @@ voice_node:
     #      share/chess_tutor/wakewords/ directory. Drop the .onnx file into
     #      src/chess_tutor/wakewords/ and rebuild with colcon.
     #   3. Absolute path to an .onnx file anywhere on disk.
-    wakeword_model: "hey_jarvis"
+    wakeword_model: "hey_chess.onnx"
     wakeword_threshold: 0.5
     recording_seconds: 10.0
     whisper_model: "base.en"
