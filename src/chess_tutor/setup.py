@@ -36,6 +36,7 @@ setup(
             "tutor_node = chess_tutor.tutor_node:main",
             "puzzle_node = chess_tutor.puzzle_node:main",
             "tts_node = chess_tutor.tts_node:main",
+            "mood_bridge_node = chess_tutor.mood_bridge_node:main",
         ],
     },
 )

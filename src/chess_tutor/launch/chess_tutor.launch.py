@@ -1,4 +1,4 @@
-"""Launch all four chess-tutor nodes with shared parameters."""
+"""Launch all chess-tutor nodes with shared parameters."""
 
 import os
 
@@ -47,6 +47,13 @@ def generate_launch_description():
             package="chess_tutor",
             executable="voice_node",
             name="voice_node",
+            parameters=[config],
+            output="screen",
+        ),
+        Node(
+            package="chess_tutor",
+            executable="mood_bridge_node",
+            name="mood_bridge_node",
             parameters=[config],
             output="screen",
         ),

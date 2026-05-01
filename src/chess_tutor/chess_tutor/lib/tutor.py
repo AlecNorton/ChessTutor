@@ -33,7 +33,7 @@ It is **{turn}** to move.
 The full solution (UCI notation): {solution}
 Moves played so far: {history}
 Next expected move (UCI): {next_move}
-
+{mood_section}
 ## How to respond
 
 You MUST reply with valid JSON in this exact format:
@@ -68,6 +68,39 @@ Respond ONLY with the JSON object, no markdown fences or extra text.\
 """
 
 
+def _format_mood_section(mood: float | None) -> str:
+    """Build the mood guidance block injected into the system prompt.
+
+    `mood` is an aggregated valence score in roughly [-1, 1]:
+        positive  -> happy/engaged
+        zero/none -> unknown or neutral
+        negative  -> frustrated/anxious
+    """
+    if mood is None:
+        return ""
+
+    if mood < -0.2:
+        guidance = (
+            "The student appears frustrated or unhappy. Be extra warm and "
+            "encouraging, offer a hint sooner if they hesitate, and don't "
+            "dwell on mistakes."
+        )
+    elif mood > 0.5:
+        guidance = (
+            "The student appears engaged and happy. Feel free to challenge "
+            "them a bit more and ask them to articulate their reasoning."
+        )
+    else:
+        guidance = "Maintain your usual friendly Socratic style."
+
+    return (
+        f"\n## Student's emotional state\n"
+        f"Current mood score: {mood:.2f} "
+        f"(range -1 to 1; positive = happy, negative = frustrated).\n"
+        f"{guidance}\n"
+    )
+
+
 class ChessTutor:
     """Wraps the Anthropic API to provide puzzle-aware chess tutoring."""
 
@@ -86,6 +119,7 @@ class ChessTutor:
         board: chess.Board,
         solution_moves: list[str],
         move_history: list[str],
+        mood: float | None = None,
     ) -> dict:
         """Send the user's natural language input to Claude for interpretation.
 
@@ -107,6 +141,7 @@ class ChessTutor:
             solution=" ".join(solution_moves),
             history=" ".join(move_history) if move_history else "(none yet)",
             next_move=next_move,
+            mood_section=_format_mood_section(mood),
         )
 
         # Add hint context so progressive hints work

@@ -1,8 +1,9 @@
 """tutor_node — bridges user speech to Claude (Anthropic API).
 
 Subscribes:
-  /user_speech    (std_msgs/String)         — transcribed user input
-  /current_puzzle (chess_tutor_msgs/PuzzleState) — current board + solution
+  /user_speech         (std_msgs/String)              — transcribed user input
+  /current_puzzle      (chess_tutor_msgs/PuzzleState) — current board + solution
+  /face_mood/aggregate (std_msgs/Float32)             — student's mood, range ~[-1, 1]
 
 Publishes:
   /tutor_response (chess_tutor_msgs/TutorResponse) — move + tutor message
@@ -11,7 +12,7 @@ Publishes:
 import chess
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import Float32, String
 
 from chess_tutor_msgs.msg import PuzzleState, TutorResponse
 
@@ -35,6 +36,7 @@ class TutorNode(Node):
 
         # ---- State ----
         self.current_puzzle: PuzzleState | None = None
+        self.latest_mood: float | None = None
 
         # ---- Pub/Sub ----
         self.response_pub = self.create_publisher(TutorResponse, "/tutor_response", 10)
@@ -42,8 +44,12 @@ class TutorNode(Node):
         self.create_subscription(
             PuzzleState, "/current_puzzle", self._on_puzzle, 10
         )
+        self.create_subscription(Float32, "/face_mood/aggregate", self._on_mood, 10)
 
         self.get_logger().info("tutor_node ready")
+
+    def _on_mood(self, msg: Float32):
+        self.latest_mood = float(msg.data)
 
     def _on_puzzle(self, msg: PuzzleState):
         # New puzzle or state update — reset progressive hints when puzzle changes.
@@ -77,6 +83,7 @@ class TutorNode(Node):
                 board=board,
                 solution_moves=list(self.current_puzzle.solution_moves),
                 move_history=list(self.current_puzzle.move_history),
+                mood=self.latest_mood,
             )
         except Exception as e:
             self.get_logger().error(f"Anthropic API call failed: {e}")
