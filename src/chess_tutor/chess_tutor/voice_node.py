@@ -8,11 +8,16 @@ Mutes detection while TTS is playing (subscribes to /tts_status) to avoid
 the robot triggering itself.
 """
 
+import os
 import queue
 import threading
 
 import numpy as np
 import rclpy
+from ament_index_python.packages import (
+    PackageNotFoundError,
+    get_package_share_directory,
+)
 from rclpy.node import Node
 from std_msgs.msg import Bool, Empty, String
 
@@ -37,6 +42,27 @@ SAMPLE_RATE = 16000
 CHUNK_SIZE = 1280
 
 
+def _resolve_wakeword(name: str) -> str:
+    """Resolve the `wakeword_model` param into a value openWakeWord accepts.
+
+    - Built-in names ("alexa", "hey_jarvis", ...) are passed through unchanged.
+    - Absolute paths are passed through unchanged.
+    - Bare filenames ending in .onnx are looked up in the installed package's
+      share/wakewords/ directory, so a custom model dropped into
+      src/chess_tutor/wakewords/<name>.onnx works after `colcon build`.
+    """
+    if not name.endswith(".onnx"):
+        return name
+    if os.path.isabs(name):
+        return name
+    try:
+        share = get_package_share_directory("chess_tutor")
+    except PackageNotFoundError:
+        return name
+    candidate = os.path.join(share, "wakewords", name)
+    return candidate if os.path.exists(candidate) else name
+
+
 class VoiceNode(Node):
     def __init__(self):
         super().__init__("voice_node")
@@ -57,7 +83,7 @@ class VoiceNode(Node):
         self.declare_parameter("whisper_compute_type", "int8")
         self.declare_parameter("audio_input_device", -1)  # -1 = default
 
-        wakeword = self.get_parameter("wakeword_model").value
+        wakeword = _resolve_wakeword(self.get_parameter("wakeword_model").value)
         self.threshold = self.get_parameter("wakeword_threshold").value
         self.record_seconds = self.get_parameter("recording_seconds").value
         whisper_name = self.get_parameter("whisper_model").value

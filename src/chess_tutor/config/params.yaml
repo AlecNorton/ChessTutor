@@ -1,7 +1,11 @@
 voice_node:
   ros__parameters:
-    # Built-in openWakeWord models: "alexa", "hey_jarvis", "hey_mycroft", "hey_rhasspy"
-    # For a custom word like "Hey Chess", train a model and pass the .onnx path here.
+    # Three forms accepted:
+    #   1. Built-in name: "alexa", "hey_jarvis", "hey_mycroft", "hey_rhasspy"
+    #   2. Bare filename like "hey_chess.onnx" — resolved from the installed
+    #      share/chess_tutor/wakewords/ directory. Drop the .onnx file into
+    #      src/chess_tutor/wakewords/ and rebuild with colcon.
+    #   3. Absolute path to an .onnx file anywhere on disk.
     wakeword_model: "hey_jarvis"
     wakeword_threshold: 0.5
     recording_seconds: 10.0

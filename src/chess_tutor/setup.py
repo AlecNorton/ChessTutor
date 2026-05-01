@@ -14,6 +14,7 @@ setup(
         ("share/" + package_name + "/launch", glob("launch/*.launch.py")),
         ("share/" + package_name + "/config", glob("config/*.yaml")),
         ("share/" + package_name + "/data", glob("data/*.csv")),
+        ("share/" + package_name + "/wakewords", glob("wakewords/*.onnx")),
     ],
     install_requires=[
         "setuptools",
