@@ -1,0 +1,32 @@
+voice_node:
+  ros__parameters:
+    # Built-in openWakeWord models: "alexa", "hey_jarvis", "hey_mycroft", "hey_rhasspy"
+    # For a custom word like "Hey Chess", train a model and pass the .onnx path here.
+    wakeword_model: "hey_jarvis"
+    wakeword_threshold: 0.5
+    recording_seconds: 10.0
+    whisper_model: "base.en"
+    whisper_device: "cpu"        # "cuda" if you have an NVIDIA GPU
+    whisper_compute_type: "int8"  # int8 = fast on CPU; use "float16" on CUDA
+    audio_input_device: -1        # -1 = system default mic
+
+tutor_node:
+  ros__parameters:
+    # Leave empty to read from $ANTHROPIC_API_KEY env var (recommended).
+    anthropic_api_key: ""
+
+puzzle_node:
+  ros__parameters:
+    # Empty -> use the bundled data/puzzles.csv from the package share dir.
+    puzzles_csv: ""
+    min_rating: 800
+    max_rating: 1500
+    autostart: true
+
+tts_node:
+  ros__parameters:
+    # Download from https://github.com/rhasspy/piper/releases — you need both files.
+    # Example paths after extracting to ~/.local/share/piper/voices/
+    piper_model_path: "/home/khyat/.local/share/piper/voices/en_US-lessac-medium.onnx"
+    piper_config_path: "/home/khyat/.local/share/piper/voices/en_US-lessac-medium.onnx.json"
+    audio_output_device: -1
