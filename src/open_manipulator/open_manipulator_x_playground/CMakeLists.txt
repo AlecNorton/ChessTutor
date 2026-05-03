@@ -19,6 +19,7 @@ find_package(rclcpp REQUIRED)
 # Build
 ################################################################################
 add_executable(hello_moveit src/hello_moveit.cpp)
+add_executable(chess_control src/chess_control.cpp)
 target_include_directories(hello_moveit PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
@@ -28,14 +29,17 @@ ament_target_dependencies(
   "moveit_ros_planning_interface"
   "rclcpp"
 )
+ament_target_dependencies(chess_control "moveit_ros_planning_interface" "rclcpp")
+
 
 ################################################################################
 # Install
 ################################################################################
-install(TARGETS hello_moveit
+install(TARGETS hello_moveit chess_control
   DESTINATION lib/${PROJECT_NAME})
 
 ################################################################################
 # Macro for ament package
 ################################################################################
 ament_package()
+
