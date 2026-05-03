@@ -218,16 +218,9 @@ def main(args=None):
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
     '''
-    #interface.make_move("a1h1")
-    #time.sleep(5.0)
-    #print("Doing r2")
-    #interface.make_move("h1h5")
-    #time.sleep(5.0)
-    #interface.make_move("h5a5")
-    #time.sleep(5.0)
-    #interface.make_move("a5a1")
-    #interface.make_move("a1c2")
-    #interface.destroy_node()
+    rclpy.spin(interface)
+    interface.destroy_node()
+
     rclpy.shutdown()
 
 if __name__ == '__main__':
