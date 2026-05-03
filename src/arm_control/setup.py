@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'facial_expression_recognition'
+package_name = 'arm_control'
 
 setup(
     name=package_name,
@@ -13,19 +13,16 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Fiona',
-    maintainer_email='fkprendergast@wpi.edu',
+    maintainer='hylander',
+    maintainer_email='stevenhyland1@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'emotion_node = facial_expression_recognition.emotion_node:main',
-            'face_confidence_node = facial_expression_recognition.face_confidence_node:main',
+            'arm = arm_control.arm_control:main',
+            'input = arm_control.chess_interface:main',
+            'arm_t = arm_control.arm_control_task:main'
         ],
     },
 )

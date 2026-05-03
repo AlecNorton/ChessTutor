@@ -1,15 +1,19 @@
+import os
+from glob import glob
 from setuptools import find_packages, setup
 
-package_name = 'facial_expression_recognition'
+package_name = 'user_confidence'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='1.0.0',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
+            ['resource/user_confidence']),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'),
+            glob(os.path.join('launch', '*launch.[pxy][yma]*'))),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -24,8 +28,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'emotion_node = facial_expression_recognition.emotion_node:main',
-            'face_confidence_node = facial_expression_recognition.face_confidence_node:main',
+            'aggregator_node = user_confidence.aggregator_node:main',
         ],
     },
 )

@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'projector_node = chess_projector.projector_node:main',
+            'combined_node = chess_projector.combined_node:main',
         ],
     },
 )
