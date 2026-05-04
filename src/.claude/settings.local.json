@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk -F',' 'NR>1 {print $4}' \"c:/Users/khyat/Desktop/HRI_FinalProject/src/chess_tutor/data/puzzles.csv\")",
+      "Bash(awk 'NR==1{print \"min=\"$1} END{print \"max=\"$1; print \"n=\"NR}')",
+      "Bash(awk -F',' 'NR>1 && $4<=600 {n++} END{print \"<=600:\"n}' \"c:/Users/khyat/Desktop/HRI_FinalProject/src/chess_tutor/data/puzzles.csv\")",
+      "Bash(awk -F',' 'NR>1 && $4<=800 {n++} END{print \"<=800:\"n}' \"c:/Users/khyat/Desktop/HRI_FinalProject/src/chess_tutor/data/puzzles.csv\")",
+      "Bash(awk -F',' 'NR>1 && $4<=1000 {n++} END{print \"<=1000:\"n}' \"c:/Users/khyat/Desktop/HRI_FinalProject/src/chess_tutor/data/puzzles.csv\")",
+      "Bash(awk -F',' 'NR>1 && $4<=1200 {n++} END{print \"<=1200:\"n}' \"c:/Users/khyat/Desktop/HRI_FinalProject/src/chess_tutor/data/puzzles.csv\")"
+    ]
+  }
+}

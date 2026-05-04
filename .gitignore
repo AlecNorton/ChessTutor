@@ -1,4 +1,36 @@
+# Python
 __pycache__/
-build/
-install/
-log/
+*.py[cod]
+*.egg-info/
+*.egg
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+*.key
+
+# ROS2 build artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+/build/
+/install/
+/log/
+
+# Audio model cache
+*.onnx.bak
+.openwakeword/
+
+# Local Piper voice downloads (60+ MB each, fetch from HuggingFace)
+piper_voices/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# OS
+Thumbs.db
