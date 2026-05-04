@@ -6,10 +6,13 @@ this node advances the board (and plays the opponent's reply) and publishes
 the new state.
 
 Subscribes:
-  /tutor_response   (chess_tutor_msgs/TutorResponse) — applied if is_correct;
-                    also reads perceived_confidence for difficulty adaptation
-  /user_confidence  (std_msgs/Float32, optional) — externally published user
-                    confidence in [0, 1]; combined with the LLM-perceived value
+  /tutor_response             (chess_tutor_msgs/TutorResponse) — applied if
+                              is_correct; also reads perceived_confidence for
+                              difficulty adaptation
+  /user_confidence/aggregate  (std_msgs/Float32, optional) — externally
+                              published user confidence in [0, 1] from the
+                              user_confidence aggregator; combined with the
+                              LLM-perceived value
 
 Publishes:
   /current_puzzle (chess_tutor_msgs/PuzzleState, latched-style)
@@ -111,7 +114,7 @@ class PuzzleNode(Node):
             TutorResponse, "/tutor_response", self._on_tutor_response, 10
         )
         self.create_subscription(
-            Float32, "/user_confidence", self._on_user_confidence, 10
+            Float32, "/user_confidence/aggregate", self._on_user_confidence, 10
         )
 
         if autostart:
