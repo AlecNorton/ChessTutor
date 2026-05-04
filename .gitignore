@@ -15,10 +15,16 @@ env/
 ros2_ws/build/
 ros2_ws/install/
 ros2_ws/log/
+/build/
+/install/
+/log/
 
 # Audio model cache
 *.onnx.bak
 .openwakeword/
+
+# Local Piper voice downloads (60+ MB each, fetch from HuggingFace)
+piper_voices/
 
 # IDE
 .vscode/

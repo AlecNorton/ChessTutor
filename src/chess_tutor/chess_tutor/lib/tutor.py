@@ -39,7 +39,8 @@ Next expected move (UCI): {next_move}
 You MUST reply with valid JSON in this exact format:
 {{
   "move_uci": <string or null>,
-  "message": <string>
+  "message": <string>,
+  "perceived_confidence": <float between 0.0 and 1.0>
 }}
 
 ### Rules for the "move_uci" field:
@@ -63,6 +64,18 @@ what pieces can actually move.
 - If the student asks to see the solution or gives up: reveal the next move \
 and explain the idea.
 - Keep messages concise — 1-3 sentences usually.
+
+### Rules for the "perceived_confidence" field:
+- Estimate how confident the student sounds based ONLY on the words of their \
+input (you do not have audio prosody). Output a single float in [0.0, 1.0]:
+  - ~0.0-0.3: hesitant, confused, asking for hints, "I don't know", lots of \
+hedging ("maybe", "I think", "umm"), wrong moves stated tentatively.
+  - ~0.4-0.6: neutral — clear statement of a move with no strong signal \
+either way, or a casual question.
+  - ~0.7-1.0: assertive — confident move declaration, explains reasoning, \
+states a plan ("I'll take with the knight then fork the queen").
+- This value drives adaptive puzzle difficulty downstream, so be calibrated, \
+not encouraging. A wrong-but-confident move is still high confidence.
 
 Respond ONLY with the JSON object, no markdown fences or extra text.\
 """
@@ -169,6 +182,13 @@ class ChessTutor:
                 text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
             result = json.loads(text)
         except json.JSONDecodeError:
-            result = {"move_uci": None, "message": text}
+            result = {"move_uci": None, "message": text, "perceived_confidence": None}
+
+        # Normalize perceived_confidence: clamp to [0,1], or None if missing/bad.
+        raw_conf = result.get("perceived_confidence")
+        if isinstance(raw_conf, (int, float)):
+            result["perceived_confidence"] = max(0.0, min(1.0, float(raw_conf)))
+        else:
+            result["perceived_confidence"] = None
 
         return result

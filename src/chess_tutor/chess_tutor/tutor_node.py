@@ -91,6 +91,7 @@ class TutorNode(Node):
 
         move_uci = result.get("move_uci") or ""
         message = result.get("message") or ""
+        perceived = result.get("perceived_confidence")  # float in [0,1] or None
 
         # Determine correctness against the solution.
         is_correct = False
@@ -104,10 +105,13 @@ class TutorNode(Node):
         out.message = message
         out.is_correct = is_correct
         out.user_input = text
+        # Sentinel -1.0 means "no judgement"; downstream consumers must check.
+        out.perceived_confidence = float(perceived) if perceived is not None else -1.0
         self.response_pub.publish(out)
 
+        conf_str = f"{perceived:.2f}" if perceived is not None else "n/a"
         self.get_logger().info(
-            f"User: '{text}' -> move={move_uci or '(none)'} correct={is_correct}"
+            f"User: '{text}' -> move={move_uci or '(none)'} correct={is_correct} conf={conf_str}"
         )
 
 

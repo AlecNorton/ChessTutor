@@ -23,9 +23,24 @@ puzzle_node:
   ros__parameters:
     # Empty -> use the bundled data/puzzles.csv from the package share dir.
     puzzles_csv: ""
-    min_rating: 800
-    max_rating: 1500
+    # Beginner-friendly band by default. The bundled CSV ranges 400-3073;
+    # keeping max_rating low ensures the random/target picker stays gentle.
+    min_rating: 400
+    max_rating: 1000
     autostart: true
+    # ---- Adaptive difficulty ----
+    # Starting target rating; clamped into [min_rating, max_rating].
+    initial_target_rating: 600
+    # Confidence thresholds. Combined confidence below LOW -> easier puzzle;
+    # above HIGH -> harder puzzle; in between -> hold steady.
+    confidence_low_threshold: 0.4
+    confidence_high_threshold: 0.7
+    # How much to shift target_rating per puzzle when the threshold is crossed.
+    difficulty_step: 75
+    # Weight on the external /user_confidence topic (vs LLM-perceived).
+    # Combined = external_weight * external + (1 - external_weight) * perceived.
+    # If only one signal is available it is used directly.
+    external_confidence_weight: 0.5
 
 tts_node:
   ros__parameters:

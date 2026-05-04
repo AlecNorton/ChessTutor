@@ -101,6 +101,32 @@ def pick_random(puzzles: list[Puzzle]) -> Puzzle:
 # Built-in sample puzzles for quick testing without downloading the full DB
 # ---------------------------------------------------------------------------
 SAMPLE_PUZZLES = [
+    # Easy mate-in-1 / mate-in-2 puzzles (rating < 500) so the fallback list
+    # still has options when the rating filter is set to a beginner band.
+    Puzzle(
+        puzzle_id="00K48",
+        fen="6Qk/6pp/p2B4/2pP4/P1q5/6P1/2P1p2P/5RK1 b - - 0 26",
+        moves=["h8g8", "f1f8"],
+        rating=425,
+        themes=["endgame", "mate", "mateIn1", "oneMove"],
+        game_url="https://lichess.org/vGu9FCAH/black#52",
+    ),
+    Puzzle(
+        puzzle_id="0HZ4M",
+        fen="5R2/8/5Kpk/5p1p/7P/6r1/8/8 b - - 1 65",
+        moves=["g3g4", "f8h8"],
+        rating=471,
+        themes=["endgame", "mate", "mateIn1", "oneMove", "rookEndgame"],
+        game_url="https://lichess.org/tYkh2wYL/black#130",
+    ),
+    Puzzle(
+        puzzle_id="0Hv5v",
+        fen="7k/pp3rpp/8/8/8/2P5/P5PP/4R2K b - - 0 26",
+        moves=["f7f2", "e1e8", "f2f8", "e8f8"],
+        rating=455,
+        themes=["backRankMate", "endgame", "mate", "mateIn2", "short"],
+        game_url="https://lichess.org/Wu4Itd7H/black#52",
+    ),
     Puzzle(
         puzzle_id="ueIE9",
         fen="3r1rk1/ppp2pp1/1b5p/8/4NqP1/2P4P/PPQ2PK1/R3R3 w - - 2 22",
