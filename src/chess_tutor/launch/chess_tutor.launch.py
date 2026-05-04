@@ -57,4 +57,11 @@ def generate_launch_description():
             parameters=[config],
             output="screen",
         ),
+        Node(
+            package="chess_tutor",
+            executable="board_viewer_node",
+            name="board_viewer_node",
+            parameters=[config],
+            output="screen",
+        ),
     ])
