@@ -61,8 +61,26 @@ class TTSNode(Node):
 
         self.get_logger().info(f"Loading Piper voice: {model_path}")
         self.voice = PiperVoice.load(model_path, config_path=config_path or None)
-        self.sample_rate = self.voice.config.sample_rate
+        # Sample rate location moved between piper-tts versions.
+        if hasattr(self.voice, "config") and hasattr(self.voice.config, "sample_rate"):
+            self.sample_rate = self.voice.config.sample_rate
+        else:
+            self.sample_rate = getattr(self.voice, "sample_rate", 22050)
         self.audio_output_device = None if out_device < 0 else out_device
+
+        # Detect which Piper synthesis API is available so we don't crash on
+        # version drift. piper-tts >= 1.3 dropped `synthesize_stream_raw` in
+        # favour of `synthesize()` yielding AudioChunk objects.
+        if hasattr(self.voice, "synthesize_stream_raw"):
+            self._piper_api = "stream_raw"
+        elif hasattr(self.voice, "synthesize"):
+            self._piper_api = "synthesize"
+        else:
+            raise RuntimeError(
+                "Loaded PiperVoice has neither synthesize_stream_raw nor "
+                "synthesize methods — incompatible piper-tts version."
+            )
+        self.get_logger().info(f"Piper synthesis API: {self._piper_api}")
 
         # ---- Pub/Sub ----
         self.status_pub = self.create_publisher(Bool, "/tts_status", 10)
@@ -99,15 +117,36 @@ class TTSNode(Node):
         """Synthesize with Piper and play through sounddevice."""
         self._publish_status(True)
         try:
-            # Piper streams int16 PCM chunks at self.sample_rate.
-            audio_chunks = []
-            for chunk in self.voice.synthesize_stream_raw(text):
-                audio_chunks.append(np.frombuffer(chunk, dtype=np.int16))
+            audio_chunks: list[np.ndarray] = []
+            sample_rate = self.sample_rate
+
+            if self._piper_api == "stream_raw":
+                # Old API: yields raw int16 PCM byte chunks.
+                for chunk in self.voice.synthesize_stream_raw(text):
+                    audio_chunks.append(np.frombuffer(chunk, dtype=np.int16))
+            else:
+                # New API: yields AudioChunk objects with audio bytes/array
+                # and (sometimes) per-chunk sample_rate.
+                for chunk in self.voice.synthesize(text):
+                    arr = None
+                    if hasattr(chunk, "audio_int16_array"):
+                        arr = np.asarray(chunk.audio_int16_array, dtype=np.int16)
+                    elif hasattr(chunk, "audio_int16_bytes"):
+                        arr = np.frombuffer(chunk.audio_int16_bytes, dtype=np.int16)
+                    elif hasattr(chunk, "audio_float_array"):
+                        floats = np.asarray(chunk.audio_float_array, dtype=np.float32)
+                        arr = (floats * 32767.0).astype(np.int16)
+                    elif isinstance(chunk, (bytes, bytearray)):
+                        arr = np.frombuffer(chunk, dtype=np.int16)
+                    if arr is not None and arr.size:
+                        audio_chunks.append(arr)
+                    if hasattr(chunk, "sample_rate") and chunk.sample_rate:
+                        sample_rate = chunk.sample_rate
 
             if not audio_chunks:
                 return
             audio = np.concatenate(audio_chunks)
-            sd.play(audio, samplerate=self.sample_rate, device=self.audio_output_device)
+            sd.play(audio, samplerate=sample_rate, device=self.audio_output_device)
             sd.wait()
         except Exception as e:
             self.get_logger().error(f"TTS playback failed: {e}")
