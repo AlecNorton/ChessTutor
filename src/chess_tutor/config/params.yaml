@@ -46,6 +46,6 @@ tts_node:
   ros__parameters:
     # Download from https://github.com/rhasspy/piper/releases — you need both files.
     # Example paths after extracting to ~/.local/share/piper/voices/
-    piper_model_path: "/home/khyat/.local/share/piper/voices/en_US-lessac-medium.onnx"
-    piper_config_path: "/home/khyat/.local/share/piper/voices/en_US-lessac-medium.onnx.json"
+    piper_model_path: "/home/alecr/.local/share/piper/voices/en_US-lessac-medium.onnx"
+    piper_config_path: "/home/alecr/.local/share/piper/voices/en_US-lessac-medium.onnx.json"
     audio_output_device: -1

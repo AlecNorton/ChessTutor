@@ -7,6 +7,10 @@
   <maintainer email="khyatsharmaoo7@gmail.com">khyat</maintainer>
   <license>MIT</license>
 
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+<exec_depend>rosidl_default_runtime</exec_depend>
+<member_of_group>rosidl_interface_packages</member_of_group>
+
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>chess_tutor_msgs</exec_depend>

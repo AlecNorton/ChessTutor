@@ -29,10 +29,13 @@ class EmotionNode(Node):
             emotion_scores = result[0]['emotion']
             dominant = result[0]['dominant_emotion']
             
+            emotion_scores = {k: float(v) for k, v in emotion_scores.items()}
+
             # Draw the dominant emotion on the frame
             cv2.putText(frame, dominant, (20, 40),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-            
+            #print("Emotion Scores: ", emotion_scores)
+            #print("type: ", type(emotion_scores))
             msg = String()
             msg.data = json.dumps(emotion_scores)
             self.emotion_pub.publish(msg)
@@ -40,8 +43,8 @@ class EmotionNode(Node):
             self.get_logger().info(f"Error: {str(e)}")
         
         # UNCOMMENT TO SEE CAMERA VIEW
-        # cv2.imshow("Emotion", frame)
-        # cv2.waitKey(1)
+        cv2.imshow("Emotion", frame)
+        cv2.waitKey(1)
 
 def main(args=None):
     rclpy.init(args=args)
