@@ -5,8 +5,20 @@ from typing import Dict
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32
-
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 from user_confidence.weights import DEFAULT_WEIGHTS, NORMALIZE
+
+#Global variables for visualization
+lines = []
+fig = plt.figure()
+ax1 = plt.axes(xlim=(0, 50), ylim = (0, 3))
+plt.xlabel('Time')
+plt.ylabel('Confidence Value')
+colors = ["red", "green", "blue", "black"]
+storedData = {}
+names = []
+xlist = []
 
 
 def calculate_mood_from_nodes(
@@ -35,6 +47,26 @@ def calculate_mood_from_nodes(
         return total / weight_sum
     return total
 
+def init():
+    for line in lines:
+        #print("LINESSSSS: ", line)
+        line.set_data([], [])
+    return lines
+def animate(i):
+    
+    #print("Stored Data", storedData)
+    for l in range(0, len(lines)-1):
+
+        temp = storedData[names[l]]
+        #print(storedData)
+        temp = temp[-50:len(temp)]
+        lines[l].set_data([i for i in range(0, len(temp))], temp)
+    temp = storedData['aggregate']
+    temp = temp[-50:len(temp)]
+    lines[len(lines)-1].set_data([i for i in range(0, len(temp))], temp)
+
+    return lines
+
 class AggregatorNode(Node):
     def __init__(self):
         super().__init__('calculate_mood_aggregator')
@@ -44,7 +76,7 @@ class AggregatorNode(Node):
 
         # Load weights (allow runtime override via parameter)
         self.weights = DEFAULT_WEIGHTS
-
+        count = 0
         # Subscribe to one topic per weighted source
         self.latest: Dict[str, float] = {}
         for name in self.weights.keys():
@@ -56,12 +88,24 @@ class AggregatorNode(Node):
                 10,
             )
             self.get_logger().info(f'Subscribed to {topic}')
+            self.get_logger().info(f'Subscribed to {topic}')
+            line = ax1.plot([], [], lw = 2, color = colors[count])[0]
+            lines.append(line)
+            storedData[name] = []
+            names.append(name)
+            count = count + 1
+
+        #Always something for the aggregate.
+        line = ax1.plot([], [], lw = 2,color = colors[count])
+        storedData['aggregate'] = []
+        #print("Receiving " + str(count) + "confidence scores..")
 
     def score_cb(self, source_name: str, msg: Float32):
         self.latest[source_name] = float(msg.data)
         self.get_logger().debug(f'Received {source_name}={msg.data}')
-
+        storedData[source_name].append(float(msg.data))
         agg = calculate_mood_from_nodes(self.latest, self.weights, normalize=NORMALIZE)
+        storedData['aggregate'].append(float(agg))
         out = Float32()
         out.data = float(agg)
         self.pub.publish(out)
@@ -71,13 +115,24 @@ class AggregatorNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = AggregatorNode()
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        pass
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
+
+    anim = FuncAnimation(fig, animate, init_func = init, frames =None, interval = 10, blit=True)
+
+    #try:
+    #    rclpy.spin(node)
+    #except KeyboardInterrupt:
+    #    pass
+    #finally:
+    #    node.destroy_node()
+    #    rclpy.shutdown()
+
+    while rclpy.ok():
+        rclpy.spin_once(node)
+        plt.ion()
+        plt.show()
+        plt.pause(.001)
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':
