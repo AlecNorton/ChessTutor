@@ -49,16 +49,21 @@ def calculate_mood_from_nodes(
 
 def init():
     for line in lines:
-        print("LINESSSSS: ", line)
+        #print("LINESSSSS: ", line)
         line.set_data([], [])
     return lines
 def animate(i):
+    
+    #print("Stored Data", storedData)
+    for l in range(0, len(lines)-1):
 
-    for l in range(0, len(lines)):
         temp = storedData[names[l]]
         #print(storedData)
         temp = temp[-50:len(temp)]
         lines[l].set_data([i for i in range(0, len(temp))], temp)
+    temp = storedData['aggregate']
+    temp = temp[-50:len(temp)]
+    lines[len(lines)-1].set_data([i for i in range(0, len(temp))], temp)
 
     return lines
 
@@ -93,7 +98,7 @@ class AggregatorNode(Node):
         #Always something for the aggregate.
         line = ax1.plot([], [], lw = 2,color = colors[count])
         storedData['aggregate'] = []
-        print("Receiving " + str(count) + "confidence scores..")
+        #print("Receiving " + str(count) + "confidence scores..")
 
     def score_cb(self, source_name: str, msg: Float32):
         self.latest[source_name] = float(msg.data)
