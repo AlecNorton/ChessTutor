@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="ChessTutor">
   <diagram id="chess-tutor-ros" name="ChessTutor ROS flow">
-    <mxGraphModel dx="1539" dy="1004" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="1700" math="0" shadow="0">
+    <mxGraphModel dx="1538" dy="1198" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="1700" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -11,104 +11,117 @@
           <mxGeometry height="56" width="2500" x="48" y="68" as="geometry" />
         </mxCell>
         <mxCell id="lane_p" parent="1" style="swimlane;horizontal=1;startSize=34;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;" value="Perception and confidence" vertex="1">
-          <mxGeometry height="500" width="320" x="410" y="140" as="geometry" />
+          <mxGeometry height="510" width="320" x="410" y="140" as="geometry" />
         </mxCell>
-        <mxCell id="n_agg" parent="lane_p" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;fontStyle=0;" value="&lt;b&gt;aggregator_node&lt;/b&gt; (user_confidence)&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Subscribes to multiple feeds, weights them all together, and outputs a full score. Currently only receives confidence score, but can receive more scores&lt;/font&gt;" vertex="1">
-          <mxGeometry height="118" width="248" x="66" y="380" as="geometry" />
+        <mxCell id="n_agg" parent="lane_p" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;fontStyle=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;aggregator_node&lt;/font&gt;&lt;/b&gt; (user_confidence)&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Subscribes to multiple feeds, weights them all together, and outputs a full score. Currently only receives confidence score, but can receive more scores&lt;/font&gt;" vertex="1">
+          <mxGeometry height="130" width="248" x="36" y="370" as="geometry" />
         </mxCell>
-        <mxCell id="n_faceconf" parent="lane_p" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;b&gt;face_confidence_node&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Converts emotion percentages into one smoothed score: how calm or engaged the face looks, scale of [0, 1]&lt;/font&gt;" vertex="1">
-          <mxGeometry height="118" width="248" x="24" y="210" as="geometry" />
+        <mxCell id="n_faceconf" parent="lane_p" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;&lt;b&gt;face_confidence_node&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Converts emotion percentages into one smoothed score: how calm or engaged the face looks, scale of [0, 1]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="248" x="24" y="210" as="geometry" />
         </mxCell>
-        <mxCell id="e_fc_agg" edge="1" parent="lane_p" source="n_faceconf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.012;exitY=0.653;exitDx=0;exitDy=0;exitPerimeter=0;" target="n_agg" value="Translated emotion-&amp;gt;confidence">
-          <mxGeometry relative="1" x="0.2998" as="geometry">
+        <mxCell id="e_fc_agg" edge="1" parent="lane_p" source="n_faceconf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;exitX=0.451;exitY=0.985;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.868;entryY=0.003;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" target="n_agg" value="Translated emotion-&amp;gt;confidence">
+          <mxGeometry relative="1" x="0.1486" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="10" y="287" />
-              <mxPoint x="10" y="350" />
+              <mxPoint x="136" y="330" />
+              <mxPoint x="50" y="330" />
+              <mxPoint x="50" y="350" />
               <mxPoint x="280" y="350" />
+              <mxPoint x="280" y="370" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="n_emotion" parent="lane_p" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;b&gt;emotion_node&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Captures webcam frames and runs facial expression analysis. Continuously emits a structured map of how much each expression is present.&lt;/font&gt;" vertex="1">
-          <mxGeometry height="118" width="248" x="40" y="40" as="geometry" />
+        <mxCell id="n_emotion" parent="lane_p" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;b&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;emotion_node&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Captures webcam frames and runs facial expression analysis. Continuously emits a structured map of how much each expression is present.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="118" width="248" x="36" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="e_us_fc" edge="1" parent="lane_p" source="n_emotion" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;spacingTop=2;" target="n_faceconf" value="Emotion snapshot from current frame">
+        <mxCell id="e_us_fc" edge="1" parent="lane_p" source="n_emotion" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;spacingTop=2;strokeWidth=2;" target="n_faceconf" value="Emotion snapshot from current frame">
           <mxGeometry relative="1" x="-0.1166" y="-4" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="lane_core" parent="1" style="swimlane;horizontal=1;startSize=34;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" value="Chess tutor core (chess_tutor package)" vertex="1">
-          <mxGeometry height="500" width="1822" x="730" y="140" as="geometry" />
+          <mxGeometry height="500" width="1210" x="730" y="140" as="geometry" />
         </mxCell>
-        <mxCell id="n_voice" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;b&gt;voice_node&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Always-on microphone path: wake word, short recording, speech-to-text. Suppresses listening while synthesized speech is playing so the robot does not answer itself.&lt;/font&gt;" vertex="1">
+        <mxCell id="n_voice" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;b&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;voice_node&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Always-on microphone path: wake word, short recording, speech-to-text. Suppresses listening while synthesized speech is playing so the robot does not answer itself.&lt;/font&gt;" vertex="1">
           <mxGeometry height="128" width="268" x="10" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="n_tutor" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;fontStyle=0;" value="&lt;b&gt;tutor_node&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Bridges user language, current puzzle, and mood into the AI tutor. Returns a suggested move, whether it matches the solution line, coaching text, and optional confidence judgments.&lt;/font&gt;" vertex="1">
-          <mxGeometry height="128" width="292" x="766" y="40" as="geometry" />
+        <mxCell id="n_tutor" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;fontStyle=0;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;&lt;b&gt;tutor_node&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Bridges user language, current puzzle, and mood into the AI tutor. Returns a suggested move, whether it matches the solution line, coaching text, and optional confidence judgments.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="128" width="292" x="530" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="n_tts" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;b&gt;tts_node&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Turns text into audio with a local voice model, plays it on speakers, and announces when it is actively speaking so voice capture can pause.&lt;/font&gt;" vertex="1">
-          <mxGeometry height="128" width="268" x="1360" y="330" as="geometry" />
+        <mxCell id="n_tts" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;b&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;tts_node&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Turns text into audio with a local voice model, plays it on speakers, and announces when it is actively speaking so voice capture can pause.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="128" width="268" x="910" y="310" as="geometry" />
         </mxCell>
-        <mxCell id="n_puzzle" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff4c3;strokeColor=#d6b656;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;fontStyle=0;" value="&lt;b&gt;puzzle_node&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Owns the puzzle lifecycle: pick rating, apply setup moves, publish board state, accept correct tutor moves, auto-play replies, narrate milestones, and shift difficulty from fused confidence.&lt;/font&gt;" vertex="1">
-          <mxGeometry height="138" width="380" x="120" y="350" as="geometry" />
+        <mxCell id="n_puzzle" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff4c3;strokeColor=#d6b656;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;fontStyle=0;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;&lt;b&gt;puzzle_node&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Owns the puzzle lifecycle: pick rating, apply setup moves, publish board state, accept correct tutor moves, auto-play replies, narrate milestones, and shift difficulty from fused confidence.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="380" x="100" y="300" as="geometry" />
         </mxCell>
-        <mxCell id="n_board" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;b&gt;board_viewer_node&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Optional human-facing board window: mirrors the live puzzle message so operators see pieces, side to move, and completion without reading logs.&lt;/font&gt;" vertex="1">
-          <mxGeometry height="128" width="292" x="900" y="355" as="geometry" />
+        <mxCell id="n_board" parent="lane_core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;align=left;spacingLeft=10;spacingTop=6;spacingRight=8;spacingBottom=6;verticalAlign=top;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;&lt;b&gt;board_viewer_node&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Optional human-facing board window: mirrors the live puzzle message so operators see pieces, side to move, and completion without reading logs.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="128" width="292" x="580" y="310" as="geometry" />
         </mxCell>
-        <mxCell id="e_vc_tu" edge="1" parent="lane_core" source="n_voice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="n_tutor" value="User utterance text&#xa;Transcript of what the human said after the wake cue">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="e_vc_tu" edge="1" parent="lane_core" source="n_voice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;strokeWidth=2;" target="n_tutor" value="&lt;div&gt;Transcript of what the human&lt;/div&gt;&lt;div&gt;said after the wake cue&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="e_pz_tu" edge="1" parent="lane_core" source="n_puzzle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="n_tutor" value="Authoritative puzzle state&#xa;FEN, solution line, progress flags, and metadata for reasoning">
+        <mxCell id="e_pz_tu" edge="1" parent="lane_core" source="n_puzzle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeWidth=2;" target="n_tutor" value="Current puzzle state">
           <mxGeometry relative="1" x="-0.0883" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
               <mxPoint x="250" y="210" />
-              <mxPoint x="720" y="210" />
-              <mxPoint x="720" y="136" />
+              <mxPoint x="390" y="210" />
+              <mxPoint x="390" y="176" />
+              <mxPoint x="510" y="176" />
+              <mxPoint x="510" y="146" />
             </Array>
+            <mxPoint x="510" y="146" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_tu_pz" edge="1" parent="lane_core" source="n_tutor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="Tutor outcome&#xa;Move proposal, correctness versus solution, and model-side judgments">
-          <mxGeometry relative="1" x="0.0935" as="geometry">
+        <mxCell id="e_tu_pz" edge="1" parent="lane_core" source="n_tutor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;exitX=0.015;exitY=0.953;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;strokeWidth=2;" target="n_puzzle" value="Tutor outcome">
+          <mxGeometry relative="1" x="0.0928" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="912" y="260" />
+              <mxPoint x="534" y="178" />
+              <mxPoint x="520" y="178" />
+              <mxPoint x="520" y="260" />
               <mxPoint x="290" y="260" />
             </Array>
             <mxPoint x="290" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_tu_tts" edge="1" parent="lane_core" source="n_tutor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="n_tts" value="Coach spoken line&#xa;Natural-language reply to read aloud to the student">
+        <mxCell id="e_tu_tts" edge="1" parent="lane_core" source="n_tutor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;strokeWidth=2;" target="n_tts" value="&lt;div&gt;Natural-language reply&lt;/div&gt;&lt;div&gt;to read aloud to the student&lt;/div&gt;">
           <mxGeometry relative="1" x="-0.3897" as="geometry">
             <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1060" y="114" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_pz_tts" edge="1" parent="lane_core" source="n_puzzle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" value="System narration&#xa;Puzzle intros, opponent replies, and completion announcements">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="e_pz_tts" edge="1" parent="lane_core" source="n_puzzle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" target="n_tts" value="System narration">
+          <mxGeometry relative="1" x="-0.0008" as="geometry">
+            <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="340" y="320" />
-              <mxPoint x="1310" y="320" />
-              <mxPoint x="1310" y="400" />
+              <mxPoint x="340" y="280" />
+              <mxPoint x="900" y="280" />
+              <mxPoint x="900" y="374" />
             </Array>
             <mxPoint x="1360" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_tts_vc" edge="1" parent="lane_core" source="n_tts" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;entryX=1.007;entryY=0.859;entryDx=0;entryDy=0;entryPerimeter=0;" target="n_voice" value="Playback busy flag&#xa;Tells listening logic to ignore the mic while audio is playing">
-          <mxGeometry relative="1" x="-0.447" as="geometry">
+        <mxCell id="e_tts_vc" edge="1" parent="lane_core" source="n_tts" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;entryX=1.007;entryY=0.859;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" target="n_voice" value="Playback busy flag&#xa;Tells listening logic to ignore the mic while audio is playing">
+          <mxGeometry relative="1" x="-0.3319" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1464" y="230" />
-              <mxPoint x="980" y="230" />
-              <mxPoint x="980" y="190" />
-              <mxPoint x="544" y="190" />
-              <mxPoint x="544" y="149" />
-              <mxPoint x="380" y="149" />
+              <mxPoint x="990" y="220" />
+              <mxPoint x="490" y="220" />
+              <mxPoint x="490" y="149" />
+              <mxPoint x="280" y="149" />
             </Array>
             <mxPoint x="330" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_pz_bd" edge="1" parent="lane_core" source="n_puzzle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;" target="n_board" value="Authoritative puzzle state&#xa;Same board snapshot for the visual debug window">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="e_pz_bd" edge="1" parent="lane_core" source="n_puzzle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;entryX=-0.001;entryY=0.394;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" target="n_board" value="&lt;div&gt;Current&amp;nbsp;&lt;/div&gt;&lt;div&gt;puzzle&lt;/div&gt;&lt;div&gt;state&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.0067" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="lane_proj" parent="1" style="swimlane;horizontal=1;startSize=34;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;" value="Projector (chess_projector) — separate display pipeline" vertex="1">
           <mxGeometry height="380" width="540" x="48" y="680" as="geometry" />
@@ -161,15 +174,17 @@
         <mxCell id="note_weights" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff9e6;strokeColor=#d6b656;align=left;fontSize=11;spacingLeft=8;" value="Extra sensors can feed the confidence aggregator as additional named sources; see user_confidence weights configuration in the repo." vertex="1">
           <mxGeometry height="72" width="480" x="48" y="1088" as="geometry" />
         </mxCell>
-        <mxCell id="e_agg_pz" edge="1" parent="1" source="n_agg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=11;labelBackgroundColor=#ffffff;entryX=0.003;entryY=0.386;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="n_puzzle" value="Fused user confidence">
+        <mxCell id="e_agg_pz" edge="1" parent="1" source="n_agg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;fontSize=16;labelBackgroundColor=#ffffff;entryX=0.003;entryY=0.386;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" target="n_puzzle" value="Fused user confidence">
           <mxGeometry relative="1" x="-0.1971" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
+              <mxPoint x="694" y="570" />
+              <mxPoint x="724" y="570" />
               <mxPoint x="724" y="543" />
               <mxPoint x="780" y="543" />
               <mxPoint x="780" y="620" />
               <mxPoint x="800" y="620" />
-              <mxPoint x="800" y="543" />
+              <mxPoint x="800" y="483" />
             </Array>
           </mxGeometry>
         </mxCell>
