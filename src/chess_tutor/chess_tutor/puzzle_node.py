@@ -13,6 +13,9 @@ Subscribes:
                               published user confidence in [0, 1] from the
                               user_confidence aggregator; combined with the
                               LLM-perceived value
+  /tts_status                 (std_msgs/Bool) — true while the avatar is
+                              speaking; used to defer advancing to the next
+                              puzzle until narration finishes
 
 Publishes:
   /current_puzzle (chess_tutor_msgs/PuzzleState, latched-style)
@@ -21,13 +24,14 @@ Publishes:
 
 import os
 import random
+import time
 
 import chess
 import rclpy
 from ament_index_python.packages import get_package_share_directory
 from rclpy.node import Node
 from rclpy.qos import QoSDurabilityPolicy, QoSProfile, QoSReliabilityPolicy
-from std_msgs.msg import Float32, String
+from std_msgs.msg import Bool, Float32, String
 
 from chess_tutor_msgs.msg import PuzzleState, TutorResponse
 
@@ -105,6 +109,14 @@ class PuzzleNode(Node):
         # Most recent LLM-perceived confidence for the current puzzle attempt.
         self.latest_perceived_confidence: float | None = None
 
+        # TTS gating — wait for the avatar to finish narrating "Puzzle complete"
+        # before loading the next puzzle so the new board doesn't appear mid-speech.
+        self.tts_speaking: bool = False
+        self._next_puzzle_pending: bool = False
+        self._seen_tts_active_since_pending: bool = False
+        self._pending_started_at: float = 0.0
+        self._pending_check_timer = None
+
         # ---- Pub/Sub ----
         self.state_pub = self.create_publisher(
             PuzzleState, "/current_puzzle", LATCHED_QOS
@@ -116,6 +128,7 @@ class PuzzleNode(Node):
         self.create_subscription(
             Float32, "/user_confidence/aggregate", self._on_user_confidence, 10
         )
+        self.create_subscription(Bool, "/tts_status", self._on_tts_status, 10)
 
         if autostart:
             # Defer slightly so subscribers (tutor_node, tts_node) come up first.
@@ -244,15 +257,47 @@ class PuzzleNode(Node):
             # Use the confidence collected during this puzzle to nudge the
             # target rating before the next pick.
             self._adapt_target_rating()
-            # Brief delay then next puzzle.
-            self.create_timer(3.0, self._next_puzzle_once)
+            # Defer the next puzzle until the "Puzzle complete" narration
+            # finishes playing, instead of guessing with a fixed delay.
+            self._request_next_puzzle()
         else:
             self._publish_state()
 
-    def _next_puzzle_once(self):
-        self.start_new_puzzle()
-        for t in list(self.timers):
-            t.cancel()
+    def _on_tts_status(self, msg: Bool):
+        self.tts_speaking = bool(msg.data)
+        # Once TTS has actually started speaking after we queued the next-puzzle
+        # request, we know the True->False transition is meaningful (and not
+        # just stale-idle from before our utterance got picked up).
+        if self._next_puzzle_pending and self.tts_speaking:
+            self._seen_tts_active_since_pending = True
+
+    def _request_next_puzzle(self):
+        """Schedule starting a new puzzle once TTS narration finishes."""
+        self._next_puzzle_pending = True
+        self._seen_tts_active_since_pending = self.tts_speaking
+        self._pending_started_at = time.time()
+        if self._pending_check_timer is None:
+            self._pending_check_timer = self.create_timer(
+                0.3, self._check_pending_next_puzzle
+            )
+
+    def _check_pending_next_puzzle(self):
+        if not self._next_puzzle_pending:
+            return
+        elapsed = time.time() - self._pending_started_at
+        # Proceed when TTS has gone idle after speaking, or after a safety
+        # timeout in case /tts_status never reports active (e.g., tts_node down).
+        tts_done_speaking = (
+            self._seen_tts_active_since_pending and not self.tts_speaking
+        )
+        safety_timeout = elapsed > 15.0
+        if tts_done_speaking or safety_timeout:
+            self._next_puzzle_pending = False
+            self._seen_tts_active_since_pending = False
+            if self._pending_check_timer is not None:
+                self._pending_check_timer.cancel()
+                self._pending_check_timer = None
+            self.start_new_puzzle()
 
     def _publish_state(self, complete: bool = False):
         msg = PuzzleState()

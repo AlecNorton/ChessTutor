@@ -1,0 +1,3 @@
+chess-python
+deepface
+tf-keras

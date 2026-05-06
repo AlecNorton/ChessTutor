@@ -1,12 +1,16 @@
 """tutor_node — bridges user speech to Claude (Anthropic API).
 
 Subscribes:
-  /user_speech         (std_msgs/String)              — transcribed user input
-  /current_puzzle      (chess_tutor_msgs/PuzzleState) — current board + solution
-  /face_mood/aggregate (std_msgs/Float32)             — student's mood, range ~[-1, 1]
+  /user_speech                (std_msgs/String)              — transcribed user input
+  /current_puzzle             (chess_tutor_msgs/PuzzleState) — current board + solution
+  /face_mood/aggregate        (std_msgs/Float32)             — student's mood, range ~[-1, 1]
+  /user_confidence/aggregate  (std_msgs/Float32, optional)   — fused user confidence in [0, 1];
+                              used to adapt prompt tone (less helpful when high)
 
 Publishes:
-  /tutor_response (chess_tutor_msgs/TutorResponse) — move + tutor message
+  /tutor_response             (chess_tutor_msgs/TutorResponse) — move + tutor message
+  /user_confidence/source/llm (std_msgs/Float32) — LLM-perceived confidence in [0, 1];
+                              consumed by the user_confidence aggregator
 """
 
 import chess
@@ -37,19 +41,29 @@ class TutorNode(Node):
         # ---- State ----
         self.current_puzzle: PuzzleState | None = None
         self.latest_mood: float | None = None
+        self.latest_user_confidence: float | None = None
 
         # ---- Pub/Sub ----
         self.response_pub = self.create_publisher(TutorResponse, "/tutor_response", 10)
+        self.confidence_pub = self.create_publisher(
+            Float32, "/user_confidence/source/llm", 10
+        )
         self.create_subscription(String, "/user_speech", self._on_speech, 10)
         self.create_subscription(
             PuzzleState, "/current_puzzle", self._on_puzzle, 10
         )
         self.create_subscription(Float32, "/face_mood/aggregate", self._on_mood, 10)
+        self.create_subscription(
+            Float32, "/user_confidence/aggregate", self._on_user_confidence, 10
+        )
 
         self.get_logger().info("tutor_node ready")
 
     def _on_mood(self, msg: Float32):
         self.latest_mood = float(msg.data)
+
+    def _on_user_confidence(self, msg: Float32):
+        self.latest_user_confidence = max(0.0, min(1.0, float(msg.data)))
 
     def _on_puzzle(self, msg: PuzzleState):
         # New puzzle or state update — reset progressive hints when puzzle changes.
@@ -84,6 +98,7 @@ class TutorNode(Node):
                 solution_moves=list(self.current_puzzle.solution_moves),
                 move_history=list(self.current_puzzle.move_history),
                 mood=self.latest_mood,
+                user_confidence=self.latest_user_confidence,
             )
         except Exception as e:
             self.get_logger().error(f"Anthropic API call failed: {e}")
@@ -108,6 +123,11 @@ class TutorNode(Node):
         # Sentinel -1.0 means "no judgement"; downstream consumers must check.
         out.perceived_confidence = float(perceived) if perceived is not None else -1.0
         self.response_pub.publish(out)
+
+        # Also publish on the dedicated confidence-source topic so the
+        # user_confidence aggregator can fuse it with other signals.
+        if perceived is not None:
+            self.confidence_pub.publish(Float32(data=float(perceived)))
 
         conf_str = f"{perceived:.2f}" if perceived is not None else "n/a"
         self.get_logger().info(

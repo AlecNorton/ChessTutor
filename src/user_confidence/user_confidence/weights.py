@@ -2,9 +2,10 @@
 A simple Python dict mapping node names to float weights."""
 
 DEFAULT_WEIGHTS = {
-    'face': 1.0,  # weight for facial expression recognition
+    'face': 0.75,  # weight for facial expression recognition
+    'llm': 1.0,    # weight for LLM-perceived confidence from tutor_node
     # 'gaze': 0.0, # probably wont do this
-    # 'voice': 0.0, # TODO: tune based on accuracy
+    'voice': .25, # TODO: tune based on accuracy
     # 'game': 0.0 # TODO: tune for game/position difficulty
 }
 

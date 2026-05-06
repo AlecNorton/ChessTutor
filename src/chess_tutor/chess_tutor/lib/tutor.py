@@ -33,7 +33,7 @@ It is **{turn}** to move.
 The full solution (UCI notation): {solution}
 Moves played so far: {history}
 Next expected move (UCI): {next_move}
-{mood_section}
+{mood_section}{confidence_section}
 ## How to respond
 
 You MUST reply with valid JSON in this exact format:
@@ -79,6 +79,44 @@ not encouraging. A wrong-but-confident move is still high confidence.
 
 Respond ONLY with the JSON object, no markdown fences or extra text.\
 """
+
+
+def _format_confidence_section(confidence: float | None) -> str:
+    """Build the confidence-aware coaching block injected into the system prompt.
+
+    `confidence` is a fused user-confidence score in [0, 1] from the
+    user_confidence aggregator (face + LLM-perceived, etc.). High = the
+    student is doing well and doesn't need much help; low = they're
+    struggling and need more support.
+    """
+    if confidence is None:
+        return ""
+
+    if confidence >= 0.7:
+        guidance = (
+            "The student is highly confident and doing well. Be terse and "
+            "direct — drop the warm preamble and the Socratic questions, "
+            "and skip hand-holding. Give one-sentence responses where you "
+            "can. Do not volunteer hints they didn't ask for. If they make "
+            "a correct move, a quick acknowledgement is enough; save the "
+            "detailed praise. If they ask a question, answer it directly "
+            "rather than turning it back into a question. Trust them to "
+            "work things out."
+        )
+    elif confidence <= 0.4:
+        guidance = (
+            "The student appears uncertain. Lean warmer and more "
+            "supportive, and offer hints a little earlier than usual."
+        )
+    else:
+        guidance = "Maintain your usual friendly Socratic style."
+
+    return (
+        f"\n## Student's confidence level\n"
+        f"Current confidence score: {confidence:.2f} "
+        f"(range 0 to 1; higher = more confident).\n"
+        f"{guidance}\n"
+    )
 
 
 def _format_mood_section(mood: float | None) -> str:
@@ -133,6 +171,7 @@ class ChessTutor:
         solution_moves: list[str],
         move_history: list[str],
         mood: float | None = None,
+        user_confidence: float | None = None,
     ) -> dict:
         """Send the user's natural language input to Claude for interpretation.
 
@@ -155,6 +194,7 @@ class ChessTutor:
             history=" ".join(move_history) if move_history else "(none yet)",
             next_move=next_move,
             mood_section=_format_mood_section(mood),
+            confidence_section=_format_confidence_section(user_confidence),
         )
 
         # Add hint context so progressive hints work
